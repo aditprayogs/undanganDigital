@@ -624,3 +624,685 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================================================
+   13. RESPONSIVE COUPLE SECTION
+   ========================================================= */
+
+/* Container utama */
+# m {
+  display: block;
+}
+
+#mempelai {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+/* Layout default: HP portrait */
+#mempelai .couple-container {
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  gap: 28px;
+}
+
+/* Kartu masing-masing mempelai */
+#mempelai .couple-card {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Foto */
+#mempelai .couple-photo {
+  width: 176px;
+  height: 220px;
+  flex-shrink: 0;
+
+  margin-inline: auto;
+  border-radius: 50% / 42%;
+  box-sizing: border-box;
+}
+
+#mempelai .couple-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Nama dan informasi */
+#mempelai .couple-info {
+  width: 100%;
+  max-width: 280px;
+  margin-top: 14px;
+}
+
+#mempelai .couple-info h3 {
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+#mempelai .couple-info p {
+  max-width: 260px;
+  margin-inline: auto;
+}
+
+/* Simbol & pada portrait */
+#mempelai .couple-ampersand {
+  line-height: 1;
+  margin-block: -8px;
+}
+
+/* =========================================================
+   LANDSCAPE: HP/TABLET
+   Kedua mempelai berada di tengah
+   ========================================================= */
+
+@media (orientation: landscape) and (max-height: 600px) {
+
+  #mempelai {
+    padding: 36px 20px;
+  }
+
+  #mempelai > div:first-child {
+    margin-bottom: 28px;
+  }
+
+  #mempelai .couple-container {
+    width: 100%;
+    max-width: 760px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto
+      minmax(0, 1fr);
+
+    justify-items: center;
+    align-items: start;
+
+    column-gap: clamp(16px, 4vw, 48px);
+    row-gap: 20px;
+  }
+
+  #mempelai .couple-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  #mempelai .couple-photo {
+    width: clamp(110px, 22vh, 160px);
+    height: clamp(140px, 28vh, 190px);
+  }
+
+  #mempelai .couple-info {
+    max-width: 260px;
+    margin-top: 12px;
+  }
+
+  #mempelai .couple-info h3 {
+    font-size: clamp(17px, 2.6vh, 23px);
+  }
+
+  #mempelai .couple-info p {
+    font-size: 11px;
+  }
+
+  #mempelai .couple-ampersand {
+    align-self: center;
+    margin: 0;
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   LANDSCAPE: LAYAR SANGAT PENDEK
+   ========================================================= */
+
+@media (orientation: landscape) and (max-height: 420px) {
+
+  #mempelai {
+    padding-block: 24px;
+  }
+
+  #mempelai .couple-container {
+    max-width: 680px;
+    column-gap: 16px;
+  }
+
+  #mempelai .couple-photo {
+    width: 100px;
+    height: 125px;
+  }
+
+  #mempelai .couple-info {
+    margin-top: 8px;
+  }
+}
+
+/* =========================================================
+   DESKTOP: BATASI LEBAR KONTEN
+   ========================================================= */
+
+@media (min-width: 900px) and (orientation: portrait),
+       (min-width: 900px) and (orientation: landscape) {
+
+  #mempelai .couple-container {
+    max-width: 800px;
+  }
+}
+
+/* =========================================================
+   14. LOVE GIFT — VINTAGE EDITORIAL
+   ========================================================= */
+
+.love-gift-section {
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      #ffffff 0%,
+      var(--cream) 72%
+    );
+
+  color: var(--text-main);
+}
+
+.love-gift-container {
+  width: 100%;
+  max-width: 410px;
+  z-index: 1;
+}
+
+/* Ornamen sudut */
+
+.love-gift-ornament {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+
+  border: 1px solid #d4af3733;
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.love-gift-ornament-top {
+  top: -90px;
+  right: -80px;
+}
+
+.love-gift-ornament-bottom {
+  bottom: -95px;
+  left: -85px;
+}
+
+/* Heading */
+
+.love-gift-heading {
+  position: relative;
+}
+
+.love-gift-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  color: var(--cocoa);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-style: italic;
+
+  letter-spacing: 0.16em;
+}
+
+.love-gift-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  margin-bottom: 13px;
+
+  color: var(--gold);
+}
+
+.love-gift-divider span {
+  display: block;
+  width: 34px;
+  height: 1px;
+
+  background: #d4af3780;
+}
+
+.love-gift-divider i {
+  font-size: 12px;
+}
+
+.love-gift-title {
+  margin: 0;
+
+  color: var(--olive);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 8vw, 44px);
+  font-weight: 600;
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+}
+
+.love-gift-description {
+  max-width: 320px;
+
+  margin: 16px auto 0;
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* Ornamen hati */
+
+.love-gift-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  margin: 30px auto;
+}
+
+.love-gift-heart span {
+  width: 48px;
+  height: 1px;
+
+  background: #d4af3760;
+}
+
+.love-gift-heart i {
+  color: var(--gold);
+  font-size: 10px;
+}
+
+/* Kartu rekening */
+
+.love-account-card {
+  position: relative;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 8px;
+
+  background: #fffdf8;
+
+  border: 1px solid #d4af3770;
+  border-radius: 5px 22px;
+
+  box-shadow:
+    0 4px 8px #39302308,
+    0 14px 32px #3930230d;
+
+  text-align: center;
+
+  transition:
+    transform 350ms var(--transition-smooth),
+    box-shadow 350ms ease;
+}
+
+/* Bingkai dalam */
+
+.love-account-inner {
+  position: relative;
+
+  padding: 23px 18px 15px;
+
+  border: 1px solid #d4af372e;
+  border-radius: 3px 16px;
+}
+
+/* Identitas mempelai */
+
+.love-account-top {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+  padding: 0 0 19px;
+
+  text-align: left;
+}
+
+.love-account-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+
+  border: 1px solid #d4af3770;
+  border-radius: 50%;
+
+  color: var(--cocoa);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.love-account-role {
+  flex: 1;
+  min-width: 0;
+}
+
+.love-account-role > span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--text-muted);
+
+  font-size: 9px;
+  letter-spacing: 0.23em;
+}
+
+.love-account-role h3 {
+  margin: 0;
+
+  color: var(--olive);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+.love-account-icon {
+  color: #d4af37b0;
+  font-size: 12px;
+}
+
+/* Garis pembatas */
+
+.love-account-divider {
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af3770 18%,
+    #d4af3770 82%,
+    transparent
+  );
+}
+
+/* Label informasi */
+
+.love-account-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--text-muted);
+
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Informasi bank */
+
+.love-bank-info {
+  padding: 19px 0 17px;
+}
+
+.love-bank-info p {
+  margin: 0;
+
+  color: var(--cocoa);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Nomor rekening */
+
+.love-account-number-box {
+  padding: 0 0 21px;
+}
+
+.love-rekening {
+  margin: 0 0 15px;
+
+  color: var(--olive-deep);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 6vw, 28px);
+  font-weight: 600;
+
+  line-height: 1.4;
+  letter-spacing: 0.045em;
+
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tombol salin */
+
+.love-copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 36px;
+  padding: 8px 15px;
+
+  border: 1px solid #4a5d4e55;
+  border-radius: 2px 14px;
+
+  background: transparent;
+  color: var(--olive);
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease;
+}
+
+.love-copy-button i {
+  font-size: 11px;
+}
+
+.love-copy-button:hover {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fffdf8;
+}
+
+.love-copy-button:active {
+  transform: scale(0.97);
+}
+
+/* Nama pemilik rekening */
+
+.love-account-owner {
+  padding: 17px 0 18px;
+}
+
+.love-account-owner p {
+  margin: 0;
+
+  color: var(--text-main);
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+}
+
+/* Footer kartu */
+
+.love-account-footer {
+  padding-top: 13px;
+
+  border-top: 1px solid #d4af372b;
+
+  color: #9a8d80;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 8px;
+
+  letter-spacing: 0.23em;
+}
+
+/* Pemisah antar kartu */
+
+.love-couple-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+  margin: 27px 0;
+}
+
+.love-couple-separator > span:first-child,
+.love-couple-separator > span:last-child {
+  width: 55px;
+  height: 1px;
+
+  background: #d4af3760;
+}
+
+.love-couple-ampersand {
+  color: var(--gold);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-style: italic;
+}
+
+/* Penutup */
+
+.love-gift-closing {
+  margin-top: 48px;
+  padding: 0 8px;
+}
+
+.love-gift-flower {
+  margin-bottom: 15px;
+
+  color: var(--gold);
+  font-size: 21px;
+}
+
+.love-gift-closing-script {
+  margin: 0;
+
+  color: var(--cocoa);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+.love-gift-closing-description {
+  max-width: 310px;
+
+  margin: 13px auto 0;
+
+  color: var(--text-muted);
+
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.love-gift-signature {
+  margin-top: 24px;
+
+  color: var(--olive);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.love-gift-signature span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* Interaksi desktop */
+
+@media (hover: hover) and (pointer: fine) {
+  .love-account-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 8px 15px #3930230c,
+      0 20px 40px #39302314;
+  }
+}
+
+/* HP kecil */
+
+@media (max-width: 360px) {
+  .love-gift-section {
+    padding-inline: 15px;
+  }
+
+  .love-account-inner {
+    padding: 19px 12px 13px;
+  }
+
+  .love-account-role h3 {
+    font-size: 23px;
+  }
+
+  .love-rekening {
+    font-size: 22px;
+  }
+
+  .love-account-number-box {
+    padding-bottom: 17px;
+  }
+}
+
+/* Hormati preferensi reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .love-account-card,
+  .love-copy-button {
+    transition: none;
+  }
+}
