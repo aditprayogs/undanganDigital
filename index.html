@@ -200,13 +200,13 @@
   }
 </style>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 <body class="bg-vintage/40 text-gray-800 font-sans leading-relaxed locked">
 
   <!-- COVER / MODAL AWAL (Layar Penuh Sebelum Ditekan "Buka Undangan") -->
-  <section id="cover" class="fixed inset-0 z-50 bg-olive-dark text-white flex flex-col items-center justify-between p-8 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('assets/img/foto2.JPEG');">
+  <section id="cover" class="fixed inset-0 z-50 bg-olive-dark text-white flex flex-col items-center justify-between p-8 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('./assets/img/foto2.JPEG');">
     <div class="mt-12 space-y-3" data-aos="fade-down">
       <p class="font-vintage italic text-2xl text-gold">The Wedding of</p>
       <h1 class="font-serif text-5xl md:text-7xl tracking-wide font-bold">Septa & Reina</h1>
@@ -256,7 +256,7 @@
   <div
     class="absolute inset-0 -z-20 bg-cover bg-center"
     style="
-      background-image: url('assets/img/foto2.png');
+      background-image: url('./assets/img/foto2.png');
       background-position: center 40%;
     "
   ></div>
@@ -461,7 +461,7 @@
           <!-- Pria -->
           <div class="space-y-4" data-aos="fade-up">
             <div class="w-48 h-60 mx-auto oval-frame overflow-hidden border-4 border-gold shadow-lg">
-              <img src="assets/img/fotoPria.png" alt="Septa" class="w-full h-full object-cover">
+              <img src="./assets/img/fotoPria.png" alt="Septa" class="w-full h-full object-cover">
             </div>
             <div>
               <h3 class="font-serif text-2xl font-bold text-olive">Septa, S.Sn.</h3>
@@ -474,7 +474,7 @@
           <!-- Wanita -->
           <div class="space-y-4" data-aos="fade-up">
             <div class="w-48 h-60 mx-auto oval-frame overflow-hidden border-4 border-gold shadow-lg">
-              <img src="assets/img/fotoWanita.png" alt="Reina" class="w-full h-full object-cover">
+              <img src="./assets/img/fotoWanita.png" alt="Reina" class="w-full h-full object-cover">
             </div>
             <div>
               <h3 class="font-serif text-2xl font-bold text-olive">Reina Yunita Puspita N., S.Sn.</h3>
@@ -586,27 +586,7 @@
           
       </section>
 
-      <!-- 6. LOVE STORY -->
-      <section id="story" class="px-6 py-16 bg-vintage/30 space-y-8">
-        <div class="text-center" data-aos="fade-up">
-          <h2 class="font-serif text-3xl text-olive font-bold">Kisah Cinta Kami</h2>
-          <p class="text-xs text-gray-500">Perjalanan singkat pertemuan kami</p>
-        </div>
-        <div class="space-y-6 relative border-l-2 border-gold/50 ml-4 pl-6 max-w-md mx-auto">
-          <div class="relative" data-aos="fade-up">
-            <div class="absolute -left-[31px] top-1 bg-gold text-white w-4 h-4 rounded-full border-2 border-white"></div>
-            <span class="text-xs font-bold text-brown">Tahun 2022</span>
-            <h4 class="font-serif font-semibold text-olive text-sm">Awal Pertemuan</h4>
-            <p class="text-xs text-gray-600 mt-1">Pertama kali bertemu di lingkungan kampus seni, saling berbagi apresiasi terhadap karya dan pemikiran.</p>
-          </div>
-          <div class="relative" data-aos="fade-up">
-            <div class="absolute -left-[31px] top-1 bg-gold text-white w-4 h-4 rounded-full border-2 border-white"></div>
-            <span class="text-xs font-bold text-brown">Tahun 2024</span>
-            <h4 class="font-serif font-semibold text-olive text-sm">Komitmen Bersama</h4>
-            <p class="text-xs text-gray-600 mt-1">Memutuskan untuk melangkah ke jenjang yang lebih serius dengan restu dari kedua keluarga besar.</p>
-          </div>
-        </div>
-      </section>
+
 
       <!-- 7. GALERI FOTO -->
 <!-- 7. GALERI FOTO (Slider Auto-Play / Carousel) -->
@@ -621,58 +601,58 @@
     <div class="swiper-wrapper">
       
       <!-- Slide 1 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/img/foto1.JPEG')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/img/foto1.JPEG')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto1.JPEG" alt="Prewedding 1" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto1.JPEG" alt="Prewedding 1" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto2.JPEG')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/foto2.JPEG')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto2.JPEG" alt="Prewedding 2" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto2.JPEG" alt="Prewedding 2" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
       <!-- Slide 3 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto3.JPEG')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/foto3.JPEG')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto3.JPEG" alt="Prewedding 3" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto3.JPEG" alt="Prewedding 3" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
       <!-- Slide 4 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto4.JPEG')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/foto4.JPEG')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto4.JPEG" alt="Prewedding 4" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto4.JPEG" alt="Prewedding 4" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
       <!-- Slide 5 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto5.JPEG')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/foto5.JPEG')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto5.JPEG" alt="Prewedding 5" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto5.JPEG" alt="Prewedding 5" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
       <!-- Slide 6 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto6.png')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/foto6.png')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto6.png" alt="Prewedding 6" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto6.png" alt="Prewedding 6" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
       <!-- Slide 7 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto7.png')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/foto7.png')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto7.png" alt="Prewedding 7" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto7.png" alt="Prewedding 7" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
       <!-- Slide 8 -->
-      <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto8.jpg')">
+      <div class="swiper-slide cursor-pointer" onclick="openLightbox('./assets/foto8.jpg')">
         <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
-          <img src="assets/foto8.jpg" alt="Prewedding 8" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <img src="./assets/foto8.jpg" alt="Prewedding 8" class="w-full h-full object-cover hover:scale-110 transition duration-500">
         </div>
       </div>
 
@@ -711,7 +691,7 @@
       <!-- 12. PENUTUP -->
       <section id="penutup" class="px-6 py-16 text-center space-y-6 bg-olive-dark text-white">
         <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-gold" data-aos="zoom-in">
-          <img src="assets/img/foto2.png" alt="Mempelai" class="w-full h-full object-cover">
+          <img src="./assets/img/foto2.png" alt="Mempelai" class="w-full h-full object-cover">
         </div>
         <div data-aos="fade-up" class="space-y-3">
           <p class="text-xs text-gray-300 leading-relaxed max-w-xs mx-auto">
@@ -750,6 +730,6 @@
 
 
   <!-- JAVASCRIPT LOGIC -->
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
