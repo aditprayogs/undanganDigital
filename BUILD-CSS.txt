@@ -1,0 +1,12 @@
+BUILD CSS TAILWIND UNTUK SEPTA & REINA
+
+1. Pastikan Node.js versi LTS terpasang.
+2. Buka terminal di folder project ini.
+3. Jalankan: npm install
+4. Jalankan: npm run build:css
+5. Pastikan file assets/css/tailwind.css sudah terbentuk.
+6. Deploy ulang folder project ke Coolify.
+
+Untuk mengedit class Tailwind selama development, jalankan: npm run watch:css
+Jangan hapus style.css: file itu berisi CSS custom desain undangan.
+Jangan upload node_modules ke server. Untuk static hosting, deploy file hasil build saja.
