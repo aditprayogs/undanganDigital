@@ -794,6 +794,450 @@ a:focus-visible {
   }
 }
 
+```css
+/* =========================================
+   LOVE GIFT — WARM EDITORIAL WEDDING
+========================================= */
+
+#love-gift {
+  --lg-cream: #fdfbf7;
+  --lg-paper: #f5f0e7;
+  --lg-olive: #4a5d4e;
+  --lg-olive-deep: #29392f;
+  --lg-cocoa: #8c6d53;
+  --lg-gold: #d4af37;
+
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(212, 175, 55, 0.10),
+      transparent 46%
+    ),
+    var(--lg-paper);
+}
+
+/* Decorative rings */
+
+#love-gift .love-gift-orbit {
+  position: absolute;
+  pointer-events: none;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 50%;
+}
+
+#love-gift .love-gift-orbit::before,
+#love-gift .love-gift-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(140, 109, 83, 0.12);
+  border-radius: inherit;
+}
+
+#love-gift .love-gift-orbit::after {
+  inset: 30px;
+  border-color: rgba(212, 175, 55, 0.12);
+}
+
+#love-gift .love-gift-orbit-top {
+  top: -115px;
+  right: -115px;
+}
+
+#love-gift .love-gift-orbit-bottom {
+  bottom: 100px;
+  left: -155px;
+  width: 270px;
+  height: 270px;
+}
+
+/* Header */
+
+#love-gift .love-gift-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 17px;
+  color: var(--lg-gold);
+}
+
+#love-gift .love-gift-kicker span {
+  width: 36px;
+  height: 1px;
+  background: var(--lg-gold);
+  opacity: 0.8;
+}
+
+#love-gift .love-gift-kicker i {
+  font-size: 21px;
+}
+
+#love-gift .love-gift-eyebrow {
+  margin-bottom: 7px;
+  color: var(--lg-cocoa);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-style: italic;
+  letter-spacing: 0.13em;
+}
+
+#love-gift .love-gift-title {
+  color: var(--lg-olive-deep);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 8vw, 3.3rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+#love-gift .love-gift-title span {
+  color: var(--lg-cocoa);
+  font-style: italic;
+  font-weight: 400;
+}
+
+#love-gift .love-gift-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin: 20px 0;
+  color: var(--lg-gold);
+  font-size: 11px;
+}
+
+#love-gift .love-gift-divider span {
+  width: 44px;
+  height: 1px;
+  background: rgba(212, 175, 55, 0.65);
+}
+
+#love-gift .love-gift-description {
+  max-width: 335px;
+  margin-inline: auto;
+  color: #69675f;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* Account cards */
+
+#love-gift .love-gift-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 23px;
+  border: 1px solid rgba(212, 175, 55, 0.48);
+  border-radius: 5px 22px;
+  background: var(--lg-olive-deep);
+  box-shadow: 0 17px 38px rgba(41, 57, 47, 0.14);
+  text-align: left;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+#love-gift .love-gift-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 23px 44px rgba(41, 57, 47, 0.20);
+}
+
+#love-gift .love-gift-card-decoration {
+  position: absolute;
+  z-index: -1;
+  top: -84px;
+  right: -68px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(212, 175, 55, 0.20);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#love-gift .love-gift-card-decoration::before,
+#love-gift .love-gift-card-decoration::after {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 50%;
+}
+
+#love-gift .love-gift-card-decoration::after {
+  inset: 32px;
+}
+
+#love-gift .love-gift-card-inner {
+  position: relative;
+  padding: 23px 21px;
+}
+
+/* Couple identity */
+
+#love-gift .love-gift-person {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(245, 240, 231, 0.16);
+}
+
+#love-gift .love-gift-avatar {
+  display: flex;
+  flex: 0 0 45px;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(212, 175, 55, 0.58);
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.09);
+  color: var(--lg-gold);
+  font-size: 15px;
+}
+
+#love-gift .love-gift-person-info {
+  min-width: 0;
+}
+
+#love-gift .love-gift-role {
+  margin-bottom: 2px;
+  color: #e0c77e;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+#love-gift .love-gift-person-info h3 {
+  color: var(--lg-cream);
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+#love-gift .love-gift-person-caption {
+  margin-top: 4px;
+  color: rgba(253, 251, 247, 0.57);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+#love-gift .love-gift-index {
+  margin-left: auto;
+  color: rgba(212, 175, 55, 0.5);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 31px;
+  font-style: italic;
+}
+
+/* Bank information */
+
+#love-gift .love-gift-account {
+  padding-top: 19px;
+}
+
+#love-gift .love-gift-label {
+  display: block;
+  color: rgba(253, 251, 247, 0.59);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+#love-gift .love-gift-bank-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 17px;
+}
+
+#love-gift .love-gift-bank-value {
+  max-width: 65%;
+  color: var(--lg-cream);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* Account number — primary focal point */
+
+#love-gift .love-gift-number-box {
+  padding: 17px;
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  border-radius: 4px 14px;
+  background: rgba(253, 251, 247, 0.055);
+}
+
+#love-gift .love-gift-number {
+  margin: 8px 0 16px;
+  color: #f1d995;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(19px, 5vw, 24px);
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Copy button */
+
+#love-gift .love-gift-copy {
+  display: flex;
+  width: 100%;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 14px;
+  border: 1px solid var(--lg-gold);
+  border-radius: 4px 12px;
+  background: var(--lg-gold);
+  color: var(--lg-olive-deep);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+#love-gift .love-gift-copy:hover {
+  background: #e5c967;
+  transform: translateY(-1px);
+}
+
+#love-gift .love-gift-copy:active {
+  transform: scale(0.98);
+}
+
+#love-gift .love-gift-copy:focus-visible {
+  outline: 3px solid rgba(212, 175, 55, 0.65);
+  outline-offset: 3px;
+}
+
+#love-gift .love-gift-owner {
+  margin-top: 19px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(245, 240, 231, 0.16);
+}
+
+#love-gift .love-gift-owner p {
+  margin-top: 5px;
+  color: var(--lg-cream);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+/* Closing note */
+
+#love-gift .love-gift-footer {
+  margin-top: 40px;
+  padding: 27px 17px 0;
+  border-top: 1px solid rgba(140, 109, 83, 0.19);
+}
+
+#love-gift .love-gift-footer-icon {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 13px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 50%;
+  color: var(--lg-cocoa);
+  font-size: 16px;
+}
+
+#love-gift .love-gift-footer-title {
+  color: var(--lg-cocoa);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-style: italic;
+}
+
+#love-gift .love-gift-footer-description {
+  max-width: 320px;
+  margin: 10px auto 0;
+  color: #747168;
+  font-size: 11px;
+  line-height: 2;
+}
+
+#love-gift .love-gift-signature {
+  margin-top: 21px;
+  color: var(--lg-olive-deep);
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#love-gift .love-gift-signature span {
+  padding-inline: 3px;
+  color: var(--lg-gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Small screens */
+
+@media (max-width: 639px) {
+  #love-gift {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #love-gift .love-gift-card-inner {
+    padding: 20px 16px;
+  }
+
+  #love-gift .love-gift-number-box {
+    padding: 14px;
+  }
+
+  #love-gift .love-gift-number {
+    font-size: clamp(18px, 5.2vw, 22px);
+    letter-spacing: 0.035em;
+  }
+
+  #love-gift .love-gift-copy {
+    min-height: 46px;
+  }
+
+  #love-gift .love-gift-orbit-bottom {
+    left: -195px;
+  }
+}
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  #love-gift .love-gift-card,
+  #love-gift .love-gift-copy {
+    transition: none;
+  }
+
+  #love-gift .love-gift-card:hover,
+  #love-gift .love-gift-copy:hover {
+    transform: none;
+  }
+}
+```
+
 /* =========================================================
    DESKTOP: BATASI LEBAR KONTEN
    ========================================================= */
@@ -805,4 +1249,6 @@ a:focus-visible {
     max-width: 800px;
   }
 }
+
+
 
