@@ -805,260 +805,220 @@
   <img id="lightbox-img" src="" alt="Zoom Photo" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain border border-white/20" onclick="event.stopPropagation()">
 </div>
 
-<!-- 12. LOVE GIFT -->
-<section
-  id="love-gift"
-  class="relative overflow-hidden px-6 py-16 text-center bg-vintage/30"
->
-  <!-- Ornamen dekoratif -->
-  <div
-    class="pointer-events-none absolute -top-12 -right-12
-           h-40 w-40 rounded-full border border-gold/20"
-  ></div>
 
-  <div
-    class="pointer-events-none absolute -bottom-12 -left-12
-           h-36 w-36 rounded-full border border-gold/20"
-  ></div>
+<!-- 12. LOVE GIFT — WARM EDITORIAL REDESIGN -->
+<section id="love-gift"
+  class="love-gift-section relative overflow-hidden px-6 py-16 text-center">
 
-  <div class="relative mx-auto max-w-md space-y-8">
+  <!-- Decorative background -->
+  <div class="love-gift-orbit love-gift-orbit-top"
+       aria-hidden="true"></div>
 
-    <!-- Judul -->
-    <div data-aos="fade-up">
-      <div class="mb-4 flex items-center justify-center gap-3">
-        <span class="h-px w-10 bg-gold/70"></span>
+  <div class="love-gift-orbit love-gift-orbit-bottom"
+       aria-hidden="true"></div>
 
-        <i class="fas fa-gift text-xl text-gold"></i>
+  <div class="relative z-10 mx-auto max-w-md">
 
-        <span class="h-px w-10 bg-gold/70"></span>
+    <!-- HEADER -->
+    <header class="love-gift-header mb-9" data-aos="fade-up">
+
+      <div class="love-gift-kicker">
+        <span></span>
+        <i class="fas fa-gift" aria-hidden="true"></i>
+        <span></span>
       </div>
 
-      <p
-        class="mb-2 font-vintage text-sm italic tracking-[0.2em] text-brown"
-      >
+      <p class="love-gift-eyebrow">
         A Little Token of Love
       </p>
 
-      <h2
-        class="font-serif text-3xl font-bold tracking-wide text-olive md:text-4xl"
-      >
-        Love Gift
+      <h2 class="love-gift-title">
+        Love <span>Gift</span>
       </h2>
 
-      <p class="mx-auto mt-4 max-w-sm text-xs leading-7 text-gray-600">
-        Doa dan kehadiran Anda merupakan hadiah terindah bagi kami.
-        Namun, apabila ingin berbagi tanda kasih, Anda dapat
-        memberikannya melalui informasi berikut.
+      <div class="love-gift-divider" aria-hidden="true">
+        <span></span>
+        <i class="fas fa-heart"></i>
+        <span></span>
+      </div>
+
+      <p class="love-gift-description">
+        Kehadiran dan doa restu Anda merupakan hadiah terindah
+        bagi kami. Namun, apabila ingin berbagi tanda kasih,
+        Anda dapat mengirimkannya melalui rekening berikut.
       </p>
-    </div>
 
-    <!-- Ornamen tengah -->
-    <div
-      class="flex items-center justify-center gap-3 text-gold/80"
-      data-aos="fade-up"
-    >
-      <span class="h-px w-12 bg-gold/40"></span>
-      <i class="fas fa-heart text-xs"></i>
-      <span class="h-px w-12 bg-gold/40"></span>
-    </div>
+    </header>
 
-    <!-- Kartu rekening Septa -->
-    <article
-      class="relative overflow-hidden rounded-2xl border border-gold/40
-             bg-white/80 p-6 text-left shadow-lg
-             transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      data-aos="fade-up"
-    >
-      <!-- Aksen dekoratif -->
-      <div
-        class="absolute -right-8 -top-8 h-28 w-28
-               rounded-full border border-gold/20"
-      ></div>
 
-      <div class="relative">
+    <!-- REKENING SEPTA -->
+    <article class="love-gift-card" data-aos="fade-up">
 
-        <div class="mb-5 flex items-center gap-4">
-          <div
-            class="flex h-12 w-12 shrink-0 items-center justify-center
-                   rounded-full border border-gold/40 bg-vintage/50"
-          >
-            <i class="fas fa-heart text-lg text-olive"></i>
+      <div class="love-gift-card-decoration"
+           aria-hidden="true"></div>
+
+      <div class="love-gift-card-inner">
+
+        <div class="love-gift-person">
+
+          <div class="love-gift-avatar">
+            <i class="fas fa-heart" aria-hidden="true"></i>
           </div>
 
-          <div>
-            <p
-              class="text-[9px] uppercase tracking-[0.25em] text-gray-500"
-            >
-              Groom
+          <div class="love-gift-person-info">
+            <p class="love-gift-role">Groom</p>
+            <h3>Septa</h3>
+            <p class="love-gift-person-caption">
+              Wedding Gift Account
             </p>
-
-            <h3 class="font-serif text-2xl font-semibold text-olive">
-              Septa
-            </h3>
           </div>
+
+          <span class="love-gift-index">01</span>
+
         </div>
 
-        <div class="space-y-1 border-t border-gold/30 pt-4">
-          <p class="text-[10px] uppercase tracking-widest text-gray-500">
-            Bank
-          </p>
+        <div class="love-gift-account">
 
-          <p id="bank-septa" class="font-serif text-lg text-brown">
-            Nama Bank
-          </p>
-        </div>
+          <div class="love-gift-bank-row">
+            <span class="love-gift-label">Nama Bank</span>
+            <span class="love-gift-bank-value" id="bank-septa">
+              Nama Bank
+            </span>
+          </div>
 
-        <div class="mt-4">
-          <p class="mb-1 text-[10px] uppercase tracking-widest text-gray-500">
-            Nomor Rekening
-          </p>
+          <div class="love-gift-number-box">
 
-          <div class="flex items-center gap-2">
-            <p
-              id="rekening-septa"
-              class="min-w-0 flex-1 break-all font-serif
-                     text-xl font-semibold tracking-wide text-olive"
-            >
+            <span class="love-gift-label">
+              Nomor Rekening
+            </span>
+
+            <p id="rekening-septa"
+               class="love-gift-number">
               1234567890
             </p>
 
             <button
               type="button"
+              class="love-gift-copy"
               onclick="salinRekening('rekening-septa', this)"
-              class="flex shrink-0 items-center gap-2 rounded-full
-                     border border-olive/20 bg-vintage/50 px-3 py-2
-                     text-[10px] font-semibold text-olive
-                     transition hover:bg-olive hover:text-white"
-              aria-label="Salin nomor rekening Septa"
-            >
-              <i class="far fa-copy"></i>
-              <span>Salin</span>
+              aria-label="Salin nomor rekening Septa">
+
+              <i class="far fa-copy" aria-hidden="true"></i>
+              <span>Salin Nomor Rekening</span>
+
             </button>
+
           </div>
-        </div>
 
-        <div class="mt-4 border-t border-gold/30 pt-4">
-          <p class="text-[10px] uppercase tracking-widest text-gray-500">
-            Atas Nama
-          </p>
+          <div class="love-gift-owner">
+            <span class="love-gift-label">Nama Pemilik Rekening</span>
+            <p id="nama-septa">Nama Lengkap Septa</p>
+          </div>
 
-          <p id="nama-septa" class="mt-1 text-sm font-medium text-gray-700">
-            Nama Lengkap Septa
-          </p>
         </div>
 
       </div>
     </article>
 
-    <!-- Kartu rekening Reina -->
-    <article
-      class="relative overflow-hidden rounded-2xl border border-gold/40
-             bg-white/80 p-6 text-left shadow-lg
-             transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      <!-- Aksen dekoratif -->
-      <div
-        class="absolute -right-8 -top-8 h-28 w-28
-               rounded-full border border-gold/20"
-      ></div>
 
-      <div class="relative">
+    <!-- REKENING REINA -->
+    <article class="love-gift-card love-gift-card-second"
+             data-aos="fade-up"
+             data-aos-delay="100">
 
-        <div class="mb-5 flex items-center gap-4">
-          <div
-            class="flex h-12 w-12 shrink-0 items-center justify-center
-                   rounded-full border border-gold/40 bg-vintage/50"
-          >
-            <i class="fas fa-heart text-lg text-olive"></i>
+      <div class="love-gift-card-decoration"
+           aria-hidden="true"></div>
+
+      <div class="love-gift-card-inner">
+
+        <div class="love-gift-person">
+
+          <div class="love-gift-avatar">
+            <i class="fas fa-heart" aria-hidden="true"></i>
           </div>
 
-          <div>
-            <p
-              class="text-[9px] uppercase tracking-[0.25em] text-gray-500"
-            >
-              Bride
+          <div class="love-gift-person-info">
+            <p class="love-gift-role">Bride</p>
+            <h3>Reina</h3>
+            <p class="love-gift-person-caption">
+              Wedding Gift Account
             </p>
-
-            <h3 class="font-serif text-2xl font-semibold text-olive">
-              Reina
-            </h3>
           </div>
+
+          <span class="love-gift-index">02</span>
+
         </div>
 
-        <div class="space-y-1 border-t border-gold/30 pt-4">
-          <p class="text-[10px] uppercase tracking-widest text-gray-500">
-            Bank
-          </p>
+        <div class="love-gift-account">
 
-          <p id="bank-reina" class="font-serif text-lg text-brown">
-            Nama Bank
-          </p>
-        </div>
+          <div class="love-gift-bank-row">
+            <span class="love-gift-label">Nama Bank</span>
+            <span class="love-gift-bank-value" id="bank-reina">
+              Nama Bank
+            </span>
+          </div>
 
-        <div class="mt-4">
-          <p class="mb-1 text-[10px] uppercase tracking-widest text-gray-500">
-            Nomor Rekening
-          </p>
+          <div class="love-gift-number-box">
 
-          <div class="flex items-center gap-2">
-            <p
-              id="rekening-reina"
-              class="min-w-0 flex-1 break-all font-serif
-                     text-xl font-semibold tracking-wide text-olive"
-            >
+            <span class="love-gift-label">
+              Nomor Rekening
+            </span>
+
+            <p id="rekening-reina"
+               class="love-gift-number">
               0987654321
             </p>
 
             <button
               type="button"
+              class="love-gift-copy"
               onclick="salinRekening('rekening-reina', this)"
-              class="flex shrink-0 items-center gap-2 rounded-full
-                     border border-olive/20 bg-vintage/50 px-3 py-2
-                     text-[10px] font-semibold text-olive
-                     transition hover:bg-olive hover:text-white"
-              aria-label="Salin nomor rekening Reina"
-            >
-              <i class="far fa-copy"></i>
-              <span>Salin</span>
+              aria-label="Salin nomor rekening Reina">
+
+              <i class="far fa-copy" aria-hidden="true"></i>
+              <span>Salin Nomor Rekening</span>
+
             </button>
+
           </div>
-        </div>
 
-        <div class="mt-4 border-t border-gold/30 pt-4">
-          <p class="text-[10px] uppercase tracking-widest text-gray-500">
-            Atas Nama
-          </p>
+          <div class="love-gift-owner">
+            <span class="love-gift-label">Nama Pemilik Rekening</span>
+            <p id="nama-reina">Nama Lengkap Reina</p>
+          </div>
 
-          <p id="nama-reina" class="mt-1 text-sm font-medium text-gray-700">
-            Nama Lengkap Reina
-          </p>
         </div>
 
       </div>
     </article>
 
-    <!-- Catatan penutup -->
-    <div class="px-3 pt-2" data-aos="fade-up">
-      <i class="fas fa-dove mb-3 text-xl text-gold"></i>
 
-      <p class="font-vintage text-lg italic text-brown">
-        With love and gratitude
+    <!-- CLOSING NOTE -->
+    <footer class="love-gift-footer" data-aos="fade-up">
+
+      <div class="love-gift-footer-icon">
+        <i class="fas fa-dove" aria-hidden="true"></i>
+      </div>
+
+      <p class="love-gift-footer-title">
+        With Love & Gratitude
       </p>
 
-      <p class="mt-2 text-xs leading-6 text-gray-500">
-        Terima kasih atas cinta, doa, dan tanda kasih yang Anda berikan
-        kepada kami. Semoga kebaikan Anda dibalas dengan keberkahan.
+      <p class="love-gift-footer-description">
+        Terima kasih atas setiap doa, cinta, dan tanda kasih
+        yang Anda berikan. Semoga kebaikan Anda senantiasa
+        dibalas dengan keberkahan.
       </p>
 
-      <p class="mt-5 font-serif text-xl text-olive">
-        Septa <span class="italic text-gold">&amp;</span> Reina
+      <p class="love-gift-signature">
+        Septa <span>&amp;</span> Reina
       </p>
-    </div>
+
+    </footer>
 
   </div>
 </section>
+
 
       <!-- 11. UCAPAN & DOA -->
       <section id="ucapan" class="px-6 py-16 bg-vintage/30 space-y-6">
