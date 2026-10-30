@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan: Septa &amp; Reina</title>
+
+  <meta name="description" content="Undangan pernikahan Septa dan Reina, 14 November 2026.">
+  <meta name="theme-color" content="#2C3A2E">
+
+  <!-- <base href="/undangan/"> -->
+
+  <!-- TAILWIND CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS ANIMATION -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- SWIPER CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+  <!-- STYLESHEET UTAMA -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-vintage/40 text-gray-800 font-sans leading-relaxed locked">
+
+  <!-- COVER / MODAL AWAL -->
+<!-- COVER / MODAL AWAL -->
+<section id="cover" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
+  
+  <!-- Gambar Latar Belakang Utama -->
+  <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/75 to-black/60 backdrop-blur-[1px]">
+    <img src="assets/testbg.png" alt="Cover Background" class="w-full h-full object-cover">
+    <!-- Overlay Gelap Transparan -->
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  <!-- KONTEN UTAMA COVER -->
+  <div class="cover-content relative z-10 my-auto flex flex-col items-center space-y-6 w-full max-w-md px-6 text-center">
+    
+    <!-- Header / Title -->
+    <div class="space-y-3" data-aos="fade-down">
+      <div class="w-12 h-12 mx-auto mb-1 flex items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-gold">
+        <i class="fas fa-heart text-xl animate-pulse"></i>
+      </div>
+      <p class="font-vintage italic text-2xl md:text-3xl text-gold">The Wedding of</p>
+      <h1 class="font-serif text-5xl md:text-7xl tracking-wide font-bold text-white drop-shadow-md">Septa & Reina</h1>
+      <p class="text-sm md:text-base font-semibold tracking-widest uppercase text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">14 November 2026</p>
+<p class="text-xs italic text-gold font-bold tracking-widest mt-1 normal-case drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">#foREIverwithSEPTA</p>
+    </div>
+
+    <!-- Card Nama Tamu -->
+    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 w-full shadow-2xl space-y-4" data-aos="fade-up">
+      <p class="text-xs uppercase tracking-wider text-gray-300">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+      <h2 id="guest-name" class="font-serif text-2xl md:text-3xl font-semibold text-gold">Tamu Undangan</h2>
+      
+      <!-- Tombol Buka Undangan -->
+      <button onclick="openInvitation()" class="open-invitation-btn group relative overflow-hidden bg-gold text-olive-dark font-semibold px-8 py-3.5 rounded-full transition-all duration-300 shadow-xl hover:shadow-gold/30 flex items-center justify-center gap-3 mx-auto border border-gold/50">
+        <span class="inline-block transition-transform duration-300 group-hover:scale-110">
+          <i class="fas fa-envelope-open-text text-lg"></i>
+        </span>
+        <span>Buka Undangan</span>
+      </button>
+    </div>
+
+    <div class="text-xs text-gray-300">
+      <p>Mohon maaf apabila ada kesalahan penulisan nama/gelar</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- CONTROL AUDIO FLOATING -->
+  <div id="audio-control" class="fixed bottom-20 left-4 md:bottom-6 md:left-6 z-40 hidden">
+    <button id="music-toggle" onclick="toggleMusic()" class="bg-olive text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:bg-olive-dark transition border-2 border-gold">
+      <i id="music-icon" class="fas fa-music"></i>
+    </button>
+  </div>
+  <audio id="bg-music" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp" type="audio/mpeg">
+  </audio>
+
+  <!-- CONTAINER UTAMA -->
+  <div class="lg:flex lg:min-h-screen">
+
+    <!-- DESKTOP LEFT PANEL -->
+    <aside id="wedding-hero" class="relative isolate flex min-h-[88svh] w-full flex-col overflow-hidden bg-[#29251f] text-white lg:fixed lg:inset-y-0 lg:left-0 lg:min-h-0 lg:w-1/2 xl:w-3/5 lg:h-screen">
+      <div class="absolute inset-0 -z-20 bg-cover bg-center" style="background-image: url('assets/img/foto2.webp'); background-position: center 40%;"></div>
+      <div class="absolute inset-0 -z-10" style="background: linear-gradient(180deg, rgba(24, 19, 15, 0.58) 0%, rgba(34, 25, 19, 0.20) 30%, rgba(34, 25, 19, 0.25) 55%, rgba(24, 19, 15, 0.82) 100%);"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[#76583d]/10 mix-blend-multiply"></div>
+
+      <div class="relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 py-6 sm:px-8 sm:py-8 lg:px-8 xl:px-12 xl:py-9">
+        <div class="flex flex-1 flex-col items-center justify-center py-14 text-center">
+          <div class="mb-5 sm:mb-7">
+            <span class="mb-3 block text-[9px] uppercase tracking-[0.32em] text-[#f0dfba] sm:text-xs">YOU'RE INVITED to celebrate the wedding of</span>
+            <div class="mx-auto h-px w-10 bg-[#d6b96e]/80"></div>
+          </div>
+
+          <h1 class="font-serif text-[clamp(2.8rem,9vw,5.5rem)] font-normal leading-[1.08] tracking-[-0.045em] text-[#fffdf8] drop-shadow-lg">
+            Septa <span class="italic text-[#ead5a0]">&amp;</span> <br class="sm:hidden" /> <span class="sm:whitespace-nowrap">Reina</span>
+          </h1>
+
+          <div class="mt-6 flex items-center gap-4 sm:mt-8 sm:gap-5">
+            <span class="h-px w-7 bg-[#e0c47d] sm:w-12"></span>
+            <p class="text-[11px] tracking-[0.28em] text-white/95 sm:text-sm sm:tracking-[0.35em]">14 · 11 · 2026</p>
+            <span class="h-px w-7 bg-[#e0c47d] sm:w-12"></span>
+          </div>
+
+          <p class="mt-4 text-xs tracking-[0.25em] text-[#ead5a0] font-medium normal-case">#foREIverwithSEPTA</p>
+          <p class="mt-3 max-w-xs text-[9px] uppercase leading-relaxed tracking-[0.20em] text-white/80 sm:text-[10px] sm:tracking-[0.28em]">Together is a beautiful place to be</p>
+
+          <div class="mt-8 flex items-center gap-3 text-[#ead5a0]/90">
+            <span class="h-px w-8 bg-[#ead5a0]/50"></span>
+            <span class="font-serif text-xl italic">&amp;</span>
+            <span class="h-px w-8 bg-[#ead5a0]/50"></span>
+          </div>
+        </div>
+
+        <footer class="mt-auto pb-2">
+          <div class="rounded-xl border border-white/20 bg-[#211a15]/40 p-4 backdrop-blur-md sm:p-5">
+            <p class="mb-3 text-[9px] uppercase tracking-[0.22em] text-[#ead5a0] sm:text-[10px]">A verse about love</p>
+            <p class="font-serif text-sm italic leading-relaxed text-white/95 sm:text-base sm:leading-relaxed">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu..."</p>
+            <div class="mt-4 flex items-center justify-between gap-3 border-t border-white/15 pt-3">
+              <p class="text-[9px] tracking-[0.15em] text-[#ead5a0] sm:text-[10px]">QS. AR-RUM: 21</p>
+              <p class="text-[8px] tracking-wide text-white/65 sm:text-[9px]">SEPTA &amp; REINA · 2026</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL / KONTEN UTAMA -->
+    <main id="main-content" class="w-full lg:w-1/2 xl:w-2/5 lg:ml-auto bg-cream min-h-screen shadow-2xl pb-24 relative">
+
+      <!-- PEMBUKA -->
+      <section id="pembuka" class="px-6 py-16 text-center space-y-6 bg-vintage/30" data-aos="fade-up">
+        <div class="w-16 h-16 mx-auto mb-2 opacity-80">
+          <i class="fas fa-leaf text-3xl text-olive"></i>
+        </div>
+        <h2 class="font-vintage text-2xl md:text-3xl text-olive tracking-widest uppercase">Assalamu’alaikum Wr. Wb.</h2>
+        <p class="text-xs md:text-sm text-gray-600 leading-relaxed italic max-w-md mx-auto">
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+        </p>
+        <span class="block text-xs font-semibold text-brown">(QS. Ar-Rum: 21)</span>
+      </section>
+
+      <!-- MEMPELAI -->
+      <section id="mempelai" class="px-6 py-16 text-center">
+        <div data-aos="fade-up" class="mb-10">
+          <h2 class="font-serif text-3xl md:text-4xl text-olive font-bold mb-2">Mempelai</h2>
+          <p class="text-xs text-gray-500 max-w-xs mx-auto leading-relaxed">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:</p>
+        </div>
+
+        <div class="couple-container">
+          <!-- Pria -->
+          <div class="couple-card" data-aos="fade-up">
+            <div class="couple-photo oval-frame overflow-hidden border-4 border-gold shadow-lg">
+              <img src="assets/img/fotoPria.webp" alt="Septa" class="w-full h-full object-cover">
+            </div>
+            <div class="couple-info">
+              <h3 class="font-serif text-2xl font-bold text-olive">Septa, S.Sn.</h3>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">Putra dari Bapak Sulaeman &amp; Ibu Mamah</p>
+            </div>
+          </div>
+
+          <div class="couple-ampersand font-serif text-3xl text-gold italic">&amp;</div>
+
+          <!-- Wanita -->
+          <div class="couple-card" data-aos="fade-up">
+            <div class="couple-photo oval-frame overflow-hidden border-4 border-gold shadow-lg">
+              <img src="assets/img/fotoWanita.webp" alt="Reina" class="w-full h-full object-cover">
+            </div>
+            <div class="couple-info">
+              <h3 class="font-serif text-2xl font-bold text-olive">Reina Yunita Puspita N., S.Sn.</h3>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">Putri dari Bapak Suratno &amp; Ibu Endah Rimbawasari</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COUNTDOWN -->
+      <section id="countdown" class="px-6 py-10 bg-olive text-white text-center rounded-2xl mx-4 my-6 shadow-xl" data-aos="zoom-in">
+        <h3 class="font-vintage text-2xl text-gold mb-6">Menuju Hari Bahagia</h3>
+        <div class="grid grid-cols-4 gap-2 text-center max-w-sm mx-auto">
+          <div class="bg-olive-dark/60 p-3 rounded-lg border border-gold/30">
+            <span id="days" class="block font-serif text-2xl md:text-3xl font-bold text-gold">00</span>
+            <span class="text-[10px] uppercase">Hari</span>
+          </div>
+          <div class="bg-olive-dark/60 p-3 rounded-lg border border-gold/30">
+            <span id="hours" class="block font-serif text-2xl md:text-3xl font-bold text-gold">00</span>
+            <span class="text-[10px] uppercase">Jam</span>
+          </div>
+          <div class="bg-olive-dark/60 p-3 rounded-lg border border-gold/30">
+            <span id="minutes" class="block font-serif text-2xl md:text-3xl font-bold text-gold">00</span>
+            <span class="text-[10px] uppercase">Menit</span>
+          </div>
+          <div class="bg-olive-dark/60 p-3 rounded-lg border border-gold/30">
+            <span id="seconds" class="block font-serif text-2xl md:text-3xl font-bold text-gold">00</span>
+            <span class="text-[10px] uppercase">Detik</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACARA -->
+      <section id="acara" class="px-6 py-16 space-y-8">
+        <div class="text-center" data-aos="fade-up">
+          <h2 class="font-serif text-3xl text-olive font-bold mb-2">Rangkaian Acara</h2>
+          <p class="text-xs text-gray-500">Insya Allah acara akan dilaksanakan pada:</p>
+        </div>
+
+        <div class="space-y-6 max-w-2xl mx-auto" data-aos="fade-up">
+          <!-- Akad -->
+          <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-gold text-center space-y-3">
+            <h3 class="font-serif text-xl font-bold text-olive">Akad Nikah</h3>
+            <p class="text-sm font-semibold text-brown"><i class="far fa-calendar-alt"></i> Sabtu, 14 November 2026</p>
+            <p class="text-xs text-gray-600"><i class="far fa-clock"></i> 08.00 WIB s/d Selesai</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              <strong>Lokasi:</strong><br> Lapang Cikalimati - Jl. H. Basuki III RT. 05 RW. 10, Binong, Batununggal, Kota Bandung
+            </p>
+          </div>
+
+          <!-- Resepsi -->
+          <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-gold text-center space-y-3">
+            <h3 class="font-serif text-xl font-bold text-olive">Resepsi Pernikahan</h3>
+            <p class="text-sm font-semibold text-brown"><i class="far fa-calendar-alt"></i> Sabtu, 14 November 2026</p>
+            <p class="text-xs text-gray-600"><i class="far fa-clock"></i> 11.00 WIB s/d Selesai</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              <strong>Lokasi:</strong><br> Lapang Cikalimati - Jl. H. Basuki III RT. 05 RW. 10, Binong, Batununggal, Kota Bandung
+            </p>
+          </div>
+
+          <!-- Hiburan Malam -->
+          <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-gold text-center space-y-3" data-aos="fade-up">
+            <div class="w-10 h-10 mx-auto flex items-center justify-center rounded-full bg-gold/20 text-gold mb-1">
+              <i class="fas fa-masks-theater text-lg"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-olive">Hiburan Malam</h3>
+            <p class="text-sm font-semibold text-brown"><i class="far fa-calendar-alt"></i> Sabtu, 14 November 2026</p>
+            <p class="text-xs text-gray-600"><i class="far fa-clock"></i> 20.00 WIB s/d Selesai</p>
+            <div class="pt-2 border-t border-gray-100">
+              <p class="font-serif text-lg font-bold text-olive">Wayang Golek Giri Komara</p>
+              <p class="text-xs text-gray-600 italic">Ki Dalang Apep AS Hudaya</p>
+            </div>
+          </div>
+
+          <!-- Peta -->
+          <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-gold text-center space-y-4">
+            <h4 class="font-serif text-lg font-bold text-olive">Lokasi Acara</h4>
+            <div class="relative z-10 w-full h-60 rounded-xl overflow-hidden shadow-inner border border-gray-200">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5634541901472!2d107.63681437585862!3d-6.942659293057421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e91bf13f6979%3A0x6127b916140ccfc4!2sLapang%20cikalimati%20gumarang!5e0!3m2!1sid!2sid!4v1792461427824!5m2!1sid!2sid" class="w-full h-full border-0 pointer-events-auto" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <div class="pt-2 flex flex-col sm:flex-row gap-2 justify-center">
+              <a href="https://maps.app.goo.gl/WS5FivYkyTagsmzA6" target="_blank" rel="noopener noreferrer" class="bg-olive text-white text-xs py-2.5 px-4 rounded-full hover:bg-olive-dark transition flex items-center justify-center gap-2 shadow-sm">
+                <i class="fas fa-map-marker-alt"></i> Buka di Google Maps
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Septa+dan+Reina&dates=20261114T010000Z/20261114T080000Z&details=Acara+Pernikahan+Septa+dan+Reina&location=Lapang+Cikalimati+Bandung" target="_blank" rel="noopener noreferrer" class="bg-vintage text-olive text-xs py-2.5 px-4 rounded-full hover:bg-gray-200 transition flex items-center justify-center gap-2 border border-olive/20 shadow-sm">
+                <i class="far fa-calendar-check"></i> Simpan Kalender
+              </a>
+            </div>
+          </div>
+
+          <!-- Turut Mengundang -->
+          <div class="bg-vintage/40 p-6 rounded-2xl border border-brown/20 text-center space-y-2" data-aos="fade-up">
+            <h4 class="font-serif font-bold text-olive text-sm">Turut Mengundang:</h4>
+            <ul class="text-xs text-gray-600 space-y-1">
+              <li>Kel. Besar Bapak Taryono, S.H. (Polda Jabar)</li>
+              <li>Kel. (Alm.) Bapak Rasidi</li>
+              <li>Bapak Sangidah (RT 05)</li>
+              <li>Bapak Sunardi</li>
+              <li>Bapak H. Aep Ruhyanna</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERI FOTO -->
+      <section id="galeri" class="px-6 py-16 space-y-6">
+        <div class="text-center" data-aos="fade-up">
+          <h2 class="font-serif text-3xl text-olive font-bold">Our Gallery</h2>
+          <p class="text-xs text-gray-500">Momen kebahagiaan kami</p>
+        </div>
+
+        <div class="swiper galeriSwiper max-w-md md:max-w-xl mx-auto rounded-2xl shadow-lg p-2 bg-white/40 border border-gold/30" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto1.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto1.webp" alt="Foto prewedding 1" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto2.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto2.webp" alt="Foto prewedding 2" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto3.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto3.webp" alt="Foto prewedding 3" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto4.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto4.webp" alt="Foto prewedding 4" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto5.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto5.webp" alt="Foto prewedding 5" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto7.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto7.webp" alt="Foto prewedding 6" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto6.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto6.webp" alt="Foto prewedding 6" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+            
+
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto8.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto8.webp" alt="Foto prewedding 6" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+
+            <div class="swiper-slide cursor-pointer" onclick="openLightbox('assets/foto9.webp')">
+              <div class="overflow-hidden rounded-xl h-60 border border-gold/20 shadow-sm">
+                <img src="assets/foto9.webp" alt="Foto prewedding 6" loading="lazy" decoding="async" class="w-full h-full object-cover">
+              </div>
+            </div>
+
+            
+        </div>
+          <div class="swiper-pagination !-bottom-1"></div>
+        </div>
+      </section>
+
+      <!-- LIGHTBOX MODAL -->
+      <div id="lightbox-modal" role="dialog" aria-modal="true" class="fixed inset-0 z-50 bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-gold transition z-50" onclick="closeLightbox()">
+          <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Zoom Photo" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain border border-white/20" onclick="event.stopPropagation()">
+      </div>
+
+      <!-- LOVE GIFT -->
+      <section id="love-gift" class="love-gift-section relative overflow-hidden px-6 py-16 text-center">
+        <div class="love-gift-orbit love-gift-orbit-top" aria-hidden="true"></div>
+        <div class="love-gift-orbit love-gift-orbit-bottom" aria-hidden="true"></div>
+
+        <div class="relative z-10 mx-auto max-w-md">
+          <header class="love-gift-header mb-9" data-aos="fade-up">
+            <div class="love-gift-kicker">
+              <span></span><i class="fas fa-gift" aria-hidden="true"></i><span></span>
+            </div>
+            <p class="love-gift-eyebrow">A Little Token of Love</p>
+            <h2 class="love-gift-title">Love <span>Gift</span></h2>
+            <div class="love-gift-divider" aria-hidden="true">
+              <span></span><i class="fas fa-heart"></i><span></span>
+            </div>
+            <p class="love-gift-description">Kehadiran dan doa restu Anda merupakan hadiah terindah bagi kami. Namun, apabila ingin berbagi tanda kasih, Anda dapat mengirimkannya melalui rekening berikut.</p>
+          </header>
+
+          <!-- SEPTA -->
+          <article class="love-gift-card" data-aos="fade-up">
+            <div class="love-gift-card-decoration" aria-hidden="true"></div>
+            <div class="love-gift-card-inner">
+              <div class="love-gift-person">
+                <div class="love-gift-avatar"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                <div class="love-gift-person-info">
+                  <p class="love-gift-role">Groom</p>
+                  <h3>Septa</h3>
+                  <p class="love-gift-person-caption">Wedding Gift Account</p>
+                </div>
+                <span class="love-gift-index">01</span>
+              </div>
+              <div class="love-gift-account">
+                <div class="love-gift-owner"><span class="love-gift-label">Atas Nama</span><p>Septa</p></div>
+                
+                <div class="love-gift-number-box mt-4">
+                  <div class="love-gift-bank-row"><span class="love-gift-label">Bank</span><span class="love-gift-bank-value">Bjb</span></div>
+                  <p id="rekening-septa-1" class="love-gift-number">0152578571100</p>
+                  <button type="button" class="love-gift-copy" onclick="salinRekening('rekening-septa-1', this)"><i class="far fa-copy"></i> <span>Salin Nomor Rekening</span></button>
+                </div>
+
+                <div class="love-gift-number-box">
+                  <div class="love-gift-bank-row"><span class="love-gift-label">Bank</span><span class="love-gift-bank-value">Seabank</span></div>
+                  <p id="rekening-septa-2" class="love-gift-number">901534568510</p>
+                  <button type="button" class="love-gift-copy" onclick="salinRekening('rekening-septa-2', this)"><i class="far fa-copy"></i> <span>Salin Nomor Rekening</span></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- REINA -->
+          <article class="love-gift-card love-gift-card-second mt-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="love-gift-card-decoration" aria-hidden="true"></div>
+            <div class="love-gift-card-inner">
+              <div class="love-gift-person">
+                <div class="love-gift-avatar"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                <div class="love-gift-person-info">
+                  <p class="love-gift-role">Bride</p>
+                  <h3>Reina</h3>
+                  <p class="love-gift-person-caption">Wedding Gift Account</p>
+                </div>
+                <span class="love-gift-index">02</span>
+              </div>
+              <div class="love-gift-account">
+                <div class="love-gift-owner"><span class="love-gift-label">Atas Nama</span><p>Reina Yunita Puspita</p></div>
+
+                <div class="love-gift-number-box mt-4">
+                  <div class="love-gift-bank-row"><span class="love-gift-label">Bank</span><span class="love-gift-bank-value">Mandiri</span></div>
+                  <p id="rekening-reina-1" class="love-gift-number">131007106172</p>
+                  <button type="button" class="love-gift-copy" onclick="salinRekening('rekening-reina-1', this)"><i class="far fa-copy"></i> <span>Salin Nomor Rekening</span></button>
+                </div>
+
+                <div class="love-gift-number-box">
+                  <div class="love-gift-bank-row"><span class="love-gift-label">Bank</span><span class="love-gift-bank-value">BCA</span></div>
+                  <p id="rekening-reina-2" class="love-gift-number">2801985345</p>
+                  <button type="button" class="love-gift-copy" onclick="salinRekening('rekening-reina-2', this)"><i class="far fa-copy"></i> <span>Salin Nomor Rekening</span></button>
+                </div>
+
+                <div class="love-gift-number-box">
+                  <div class="love-gift-bank-row"><span class="love-gift-label">Bank</span><span class="love-gift-bank-value">Seabank</span></div>
+                  <p id="rekening-reina-3" class="love-gift-number">901184481914</p>
+                  <button type="button" class="love-gift-copy" onclick="salinRekening('rekening-reina-3', this)"><i class="far fa-copy"></i> <span>Salin Nomor Rekening</span></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <footer class="love-gift-footer" data-aos="fade-up">
+            <div class="love-gift-footer-icon"><i class="fas fa-dove"></i></div>
+            <p class="love-gift-footer-title">With Love & Gratitude</p>
+            <p class="love-gift-footer-description">Terima kasih atas setiap doa, cinta, dan tanda kasih yang Anda berikan. Semoga kebaikan Anda senantiasa dibalas dengan keberkahan.</p>
+            <p class="love-gift-signature">Septa <span>&amp;</span> Reina</p>
+          </footer>
+        </div>
+      </section>
+
+      <!-- UCAPAN & DOA -->
+      <section id="ucapan" class="px-6 py-16 bg-vintage/30 space-y-6">
+        <div class="text-center" data-aos="fade-up">
+          <h2 class="font-serif text-3xl text-olive font-bold">Kartu Ucapan & Doa</h2>
+          <p class="text-xs text-gray-500">Berikan ucapan manis untuk kedua mempelai</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md space-y-4 max-w-md mx-auto" data-aos="fade-up">
+          <textarea id="form-ucapan" rows="3" placeholder="Tuliskan pesan atau doa Anda di sini..." class="w-full text-xs p-3 rounded-lg border focus:ring-2 focus:ring-olive focus:outline-none"></textarea>
+          <button type="button" onclick="kirimUcapan()" class="w-full bg-olive text-white font-medium py-2.5 rounded-lg hover:bg-olive-dark transition text-xs">
+            Kirim Ucapan
+          </button>
+        </div>
+      </section>
+
+      <!-- PENUTUP -->
+      <section id="penutup" class="px-6 py-16 text-center space-y-6 bg-olive-dark text-white">
+        <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-gold" data-aos="zoom-in">
+          <img src="assets/img/foto2.webp" alt="Mempelai" class="w-full h-full object-cover">
+        </div>
+        <div data-aos="fade-up" class="space-y-3">
+          <p class="text-xs text-gray-300 leading-relaxed max-w-xs mx-auto">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
+          <p class="font-vintage text-2xl text-gold">Terima Kasih</p>
+          <h3 class="font-serif text-3xl font-bold">Septa & Reina</h3>
+          <p class="text-xs tracking-widest text-gold italic normal-case pt-2">#foREIverwithSEPTA</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- BOTTOM NAV (MOBILE) -->
+  <nav class="fixed bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-gray-200 lg:hidden py-2 px-4 shadow-lg">
+    <div class="flex justify-around items-center max-w-xs mx-auto text-gray-500">
+      <a href="#mempelai" class="flex flex-col items-center hover:text-olive transition active:scale-95">
+        <i class="fas fa-heart text-lg"></i>
+        <span class="text-[10px] mt-0.5 font-medium">Mempelai</span>
+      </a>
+      <a href="#acara" class="flex flex-col items-center hover:text-olive transition active:scale-95">
+        <i class="fas fa-calendar-alt text-lg"></i>
+        <span class="text-[10px] mt-0.5 font-medium">Acara</span>
+      </a>
+      <a href="#galeri" class="flex flex-col items-center hover:text-olive transition active:scale-95">
+        <i class="fas fa-images text-lg"></i>
+        <span class="text-[10px] mt-0.5 font-medium">Galeri</span>
+      </a>
+      <a href="#ucapan" class="flex flex-col items-center hover:text-olive transition active:scale-95">
+        <i class="fas fa-comment-dots text-lg"></i>
+        <span class="text-[10px] mt-0.5 font-medium">Ucapan</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
